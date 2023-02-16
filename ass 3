@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+	int i,odsum=0,evsum=0;
+	i=1;
+	while(i<=10)
+	{
+		printf("%d\n",i);
+		if(i%2==0)
+		{
+			evsum=evsum+i;
+		}
+		else{
+			odsum=odsum+i;
+		}
+		i++;
+	}
+	printf("even sum: %d\n",evsum);
+	printf("odd sum: %d",odsum);
+}
