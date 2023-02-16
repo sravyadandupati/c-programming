@@ -1,0 +1,13 @@
+//To print x^y
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int x,y,i;
+	printf("Enter x value:");
+	scanf("%d",&x);
+	printf("Enter y value:");
+	scanf("%d",&y);
+	i=pow(x,y);
+	printf("Your answer is %d",i);
+}
