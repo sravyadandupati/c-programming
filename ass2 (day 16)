@@ -1,0 +1,31 @@
+//to print all those numbers from 1 upto n which are divisible by k and also print evensum and oddsum from those divisible.
+#include<stdio.h>
+main()
+{
+	int n,i,k,odsm=0,evsm=0;
+	printf("Enter n value:");
+	scanf("%d",&n);
+	printf("Enter k value:");
+	scanf("%d",&k);
+	i=1;
+	while(i<=n)
+	{
+		if(i%k==0)
+		{
+			printf("%d\n",i);
+			{
+				if(i%2==0)
+				{
+					evsm=evsm+i;	
+				}	
+				else
+				{
+					odsm=odsm+i;
+				}
+			}
+		}
+		i++;
+	}
+	printf("even sum is %d\n",evsm);
+	printf("odd sum is %d",odsm);
+}
