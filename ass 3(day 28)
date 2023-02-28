@@ -1,0 +1,23 @@
+/Count of prime numbers between the given range
+#include<stdio.h>
+main()
+{
+	int n,m,i,j,count,pcount;
+	scanf("%d %d",&n,&m);
+	for(i=n;i<=m;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			if(i%j==0)
+			{
+				count++;
+			}
+		}
+		if(count==2)
+		{
+			pcount++;
+		}
+		count=0;
+	}
+	printf("%d",pcount);
+}
