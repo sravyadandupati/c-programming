@@ -1,0 +1,23 @@
+#include<stdio.h>
+main()
+{
+	int num1,num2,m,r,sum=0,i;
+	scanf("%d %d",&num1,&num2);
+	for(i=num1;i<=num2;i++)
+	{
+		m=i;
+		while(i>0)
+		{
+			r=i%10;
+			sum=sum+(r*r*r);
+			i=i/10;
+		}
+		if(m==sum)
+		{
+			printf("%d ",m);
+		}
+		sum=0;
+		i=m;
+	}
+	
+}
