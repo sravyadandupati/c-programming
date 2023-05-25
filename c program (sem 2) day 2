@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main()
+{
+	int a[30],ar[30],res[60];
+	int i,j,k,n1,n2;
+	printf("enter no.of elements: ");
+	scanf("%d",&n1);
+	for(i=0;i<n1;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("enter the 2nd elements: ");
+	scanf("%d",&n2);
+	for(i=0;i<n2;i++)
+	{
+		scanf("%d",&ar[i]);
+	}
+	i=0;
+	j=0;
+	k=0;
+	while(i<n1&&j<n2)
+	{
+		if(a[i]<=ar[j])
+		{
+			res[k]=a[i];
+			i++;
+			k++;
+		}
+		else
+		{
+			res[k]=ar[j];
+			k++;
+			j++;
+		}
+	}
+	while(i<n1)
+{
+		res[k]=a[i];
+		i++;
+		k++;
+	}
+	while(j<n2)
+	{
+		res[k]=ar[j];
+		k++;
+		j++;
+	}
+	printf("\nmerged array is: ");
+	for(i=0;i<n1+n2;i++)
+	printf("%d",res[i]);
+	return 0;
+}
